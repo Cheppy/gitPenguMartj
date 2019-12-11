@@ -1,4 +1,5 @@
-public interface Stack extends DataStructure {
-push();
+public interface Stack<T> extends DataStructure {
+public T push(T elem);
+public T pop();
 
 }

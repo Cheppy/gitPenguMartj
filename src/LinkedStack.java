@@ -1,2 +1,2 @@
-public class LinkedStack implements Stack {
+public class LinkedStack {
 }

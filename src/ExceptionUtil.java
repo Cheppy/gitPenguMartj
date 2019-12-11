@@ -20,7 +20,6 @@ public class ExceptionUtil {
         throw new UnsupportedOperationException(message);
     }
     /**
-
      * Use this to end a method or constructor abruptly (by throwing an exception).
      * &lt;p&gt;
      * This signals to the user/developer, that an argument passed to a method is

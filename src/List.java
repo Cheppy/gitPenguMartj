@@ -10,6 +10,9 @@ public class List {
         info = x;
         next = l;
     }
+
+
+
     public void insert(int x) {
         next = new List(x, next);
     }

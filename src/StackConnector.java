@@ -1,29 +1,46 @@
 public class StackConnector<T> implements DataStructureConnector, Stack<T>{
 
+//   stack size
+    private int stackSize;
+    private T[] stackArray;     // if List.info is reffered to the stack size, otherwise dunno
+    int top;
 
-    private final LinkedList<T> linkedList = new LinkedList<>();
 
-        public T push(T data) {
-            linkedList.addFirst(data);
-            return data;
+
+  /// might need   A CONSTRUCTOR?
+
+
+    @Override
+    public void push(T entry){
+        if(this.isEmpty()){
+            throw new UnsupportedOperationException("Stack is empty. Can not push element.");
+            //increase capacity??
         }
 
-        public T pop() {
-            return linkedList.removeFirst();
+        stackArray[++top] = entry;
+    }
+
+
+    public T pop() throws UnsupportedOperationException {
+        if(this.isEmpty()){
+            throw new UnsupportedOperationException("Stack is empty. Can not remove element.");
         }
+        T element = this.stackArray[top--];
+        System.out.println("DEBUG: ELEEMENT  POPPED " + element);
+        return element;
+    }
+
 
     @Override
     public int size() {
-        return 0;
+        return stackSize;
     }
 
-    public boolean isEmpty() {
-            return linkedList.isEmpty();
-        }
+    public boolean isEmpty() { return top == -1;}
 
         @Override
         public String toString() {
-            return linkedList.toString();
+          //  return list.toString();
         }
 
     @Override
@@ -42,56 +59,3 @@ public class StackConnector<T> implements DataStructureConnector, Stack<T>{
     }
 }
 
-    class LinkedList<T> extends  List {
-
-        public LinkedList(int x) {
-            super(x);
-        }
-
-        public LinkedList(int x, List l) {
-            super(x, l);
-        }
-
-        private static class Node<T> {
-
-            private T data;
-            private Node<T> next;
-
-            public Node(T data) {
-                this.data = data;
-            }
-
-            @Override
-            public String toString() {
-                return data.toString();
-            }
-        }
-
-        private Node<T> first = null;
-
-        @Override
-        public void delete() {
-            super.delete();
-        }
-
-        @Override
-        public void insert(T data) {
-            Node<T> newFirst = new Node<T>(data);
-            newFirst.next = first;
-            first = newFirst;
-        }
-
-        // используется для pop операции
-        public T removeFirst() {
-            Node<T> oldFirst = first;
-            first = first.next;
-            return oldFirst.data;
-        }
-
-
-
-        public boolean isEmpty() {
-            return first == null;
-        }
-
-    }

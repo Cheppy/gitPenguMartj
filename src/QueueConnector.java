@@ -1,16 +1,16 @@
 public class QueueConnector<T> implements  DataStructureConnector, Queue<T> {
 
-    private int queue;
-    private T[] stackArray;     // if List.info is reffered to the stack size, otherwise dunno
+    private int queueSize;
+    private T[] queueArray;     //?
     int top;
     @Override
     public int size() {
-        return 0;
+        return queueSize;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return this.queueSize == 0;
     }
 
     @Override
@@ -35,6 +35,11 @@ public class QueueConnector<T> implements  DataStructureConnector, Queue<T> {
 
     @Override
     public T dequeue() {
+
+        //List copyQ = new List(0, this.queueArray); //added
+        //queueArray.delete();                                 //added
         return null;
+
+
     }
 }

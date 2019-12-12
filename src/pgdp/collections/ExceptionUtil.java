@@ -1,4 +1,4 @@
-//package pgdp.collections;
+package pgdp.collections;
 /**
  * Vorgegebene Klasse, hier drin wird nichts bewertet !!!
  * &lt;p&gt;

@@ -1,4 +1,8 @@
 public class QueueConnector<T> implements  DataStructureConnector, Queue<T> {
+
+    private int queue;
+    private T[] stackArray;     // if List.info is reffered to the stack size, otherwise dunno
+    int top;
     @Override
     public int size() {
         return 0;

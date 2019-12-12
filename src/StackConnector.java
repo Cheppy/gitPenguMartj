@@ -40,7 +40,7 @@ public class StackConnector<T> implements DataStructureConnector, Stack<T>{
 
         @Override
         public String toString() {
-          //  return list.toString();
+            return stackArray.toString();
         }
 
     @Override
@@ -48,8 +48,8 @@ public class StackConnector<T> implements DataStructureConnector, Stack<T>{
         return false;
     }
 
-    @Override
-    public Object addElement(Object element) {
+    //@Override
+    public T addElement(Object elem) {
         return null;
     }
 

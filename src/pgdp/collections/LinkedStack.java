@@ -1,6 +1,6 @@
 package pgdp.collections;
 
-class LinkedStack<T> implements Stack<T> {
+public class LinkedStack<T> implements Stack<T> {
   List<T> elem;
 
   public  LinkedStack(){

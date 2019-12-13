@@ -3,7 +3,7 @@ package pgdp.collections;
 public class DataStructureLink {
   DataStructureConnector a,b;
 
-  public  DataStructureLink(){
+  public  DataStructureLink(DataStructureConnector a, DataStructureConnector b){
     this.a =a;  //?
     this.b =b;
   }

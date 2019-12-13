@@ -2,7 +2,7 @@ package pgdp.collections;
 
 import java.lang.reflect.Array;
 
-class LinkedQueue<T> implements Queue<T> {
+public class LinkedQueue<T> implements Queue<T> {
 
   List<T> elem;
 

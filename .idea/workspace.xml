@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="91731cee-a78c-47ac-8722-364c3994de0b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pgdp/collections/PenguinSupermarket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pgdp/collections/PenguinSupermarket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pgdp/collections/PenguinCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pgdp/collections/PenguinCustomer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +131,14 @@
     <state width="2517" height="185" key="GridCell.Tab.0.right/0.0.2560.1410@0.0.2560.1410" timestamp="1576262597000" />
     <state width="1398" height="205" key="GridCell.Tab.0.right/0.23.1440.801@0.23.1440.801" timestamp="1576237706735" />
     <state width="1398" height="205" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1576185086829" />
+    <state x="976" y="528" key="com.intellij.ide.util.TipDialog" timestamp="1576270188224">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="976" y="528" key="com.intellij.ide.util.TipDialog/0.0.2560.1410@0.0.2560.1410" timestamp="1576270188224" />
+    <state x="996" y="354" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1576272402817">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="996" y="354" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.2560.1410@0.0.2560.1410" timestamp="1576272402817" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1576237363806">
       <screen x="0" y="23" width="1440" height="801" />
     </state>

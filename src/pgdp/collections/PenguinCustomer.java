@@ -7,10 +7,13 @@ public class PenguinCustomer {
     Stack<FishyProduct> band;
 
     public String getName() {
-        ;
+
         return Name;
     }
 
+    public void goToCheckOut(){
+
+    }
     public int getMoney() {
         return Money;
     }
@@ -25,7 +28,7 @@ public class PenguinCustomer {
 
     public void placeAllProductsOnBand(Queue<FishyProduct> fishyProductQueue) {
 
-        var link = new DataStructureLink(new StackConnector(products), new QueueConnector(fishyProductQueue));
+            var link = new DataStructureLink(new StackConnector(products), new QueueConnector(fishyProductQueue));
         link.moveAllFromAToB();
 
     }
@@ -50,6 +53,7 @@ public class PenguinCustomer {
         while (!products.isEmpty()) {
             FishyProduct product = products.pop();
             totalPay += product.getPrice();// sum prices
+            products.push(product);
         }
         return totalPay;
     }

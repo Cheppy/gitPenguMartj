@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="91731cee-a78c-47ac-8722-364c3994de0b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/src/pgdp/collections/DataStructureLink.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pgdp/collections/DataStructureLink.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pgdp/collections/LinkedQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pgdp/collections/LinkedQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pgdp/collections/LinkedStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pgdp/collections/LinkedStack.java" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/List.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StackConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StackConnector.java" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,13 +90,15 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="872" y="363" key="#Project_Structure/0.0.2560.1410@0.0.2560.1410" timestamp="1576064292140" />
-    <state x="553" y="129" key="#com.intellij.ide.util.MemberChooser" timestamp="1576151131563">
-      <screen x="0" y="23" width="1440" height="801" />
+    <state x="983" y="187" key="#com.intellij.ide.util.MemberChooser" timestamp="1576171215322">
+      <screen x="0" y="0" width="2560" height="1410" />
     </state>
+    <state x="983" y="187" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1410@0.0.2560.1410" timestamp="1576171215322" />
     <state x="553" y="129" key="#com.intellij.ide.util.MemberChooser/0.23.1440.801@0.23.1440.801" timestamp="1576151131563" />
-    <state x="590" y="302" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576089064286">
-      <screen x="0" y="23" width="1440" height="801" />
+    <state x="1049" y="491" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576167972496">
+      <screen x="0" y="0" width="2560" height="1410" />
     </state>
+    <state x="1049" y="491" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.2560.1410@0.0.2560.1410" timestamp="1576167972496" />
     <state x="590" y="302" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.801@0.23.1440.801" timestamp="1576089064286" />
     <state x="458" y="177" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576184466041">
       <screen x="0" y="23" width="1440" height="808" />
@@ -100,6 +108,7 @@
       <screen x="0" y="0" width="2560" height="1410" />
     </state>
     <state x="1060" y="459" key="FileChooserDialogImpl/0.0.2560.1410@0.0.2560.1410" timestamp="1576064434737" />
+<<<<<<< Updated upstream
     <state width="1398" height="205" key="GridCell.Tab.0.bottom" timestamp="1576237706736">
       <screen x="0" y="23" width="1440" height="801" />
     </state>
@@ -124,6 +133,12 @@
       <screen x="0" y="23" width="1440" height="801" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.23.1440.801@0.23.1440.801" timestamp="1576237363806" />
+=======
+    <state x="662" y="325" key="new project wizard" timestamp="1576171001112">
+      <screen x="0" y="0" width="2560" height="1410" />
+    </state>
+    <state x="662" y="325" key="new project wizard/0.0.2560.1410@0.0.2560.1410" timestamp="1576171001112" />
+>>>>>>> Stashed changes
     <state x="502" y="23" key="refactoring.ChangeSignatureDialog" timestamp="1576105443960">
       <screen x="0" y="23" width="1440" height="801" />
     </state>

@@ -3,10 +3,13 @@ package pgdp.collections;
 public class DataStructureLink {
   DataStructureConnector a,b;
 
-  public  DataStructureLink(DataStructureConnector a, DataStructureConnector b){
+    public  DataStructureLink(DataStructureConnector a, DataStructureConnector b){
+ // public  DataStructureLink(){
     this.a =a;  //?
     this.b =b;
   }
+
+
 
   public boolean moveNextFromAToB() {
     if (!a.hasNextElement()) {

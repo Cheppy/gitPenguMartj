@@ -24,8 +24,9 @@ public class PenguinCustomer
     }
 
     public void placeAllProductsOnBand(Queue<FishyProduct> fishyProductQueue){
-        DataStructureLink  dlink= new DataStructureLink();
-        dlink.moveAllFromAToB();
+
+        var link = new DataStructureLink(new StackConnector(products), new QueueConnector(fishyProductQueue));
+        link.moveAllFromAToB();
 
     }
 
@@ -35,8 +36,8 @@ public class PenguinCustomer
 
     public void pay(){
 
-        for (p:band) {
-            this.Money-=p.();
+   //     for (p:band) {
+    //        this.Money-=p.();
         }
     }
-}
+

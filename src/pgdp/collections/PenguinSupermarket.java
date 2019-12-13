@@ -12,8 +12,8 @@ public class PenguinSupermarket {
     }
 
 
-    Checkout getCheckoutWithSmallestQueue (){
-    return Checkout firstfromArray;}
+   // Checkout getCheckoutWithSmallestQueue (){
+  //  return Checkout null;}
 
     void CloseCheckout (int index){
 

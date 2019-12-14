@@ -7,53 +7,64 @@
 
         public Checkout[] checkouts;
 
-        public PenguinSupermarket(int money){
-
+        public PenguinSupermarket(int numberOfCheckouts){
+            checkouts = new Checkout[numberOfCheckouts];
+            for (int x = 0; x < checkouts.length; x++) {
+                checkouts[x] = new Checkout();
+            } 
         }
 
-
-       // Checkout getCheckoutWithSmallestQueue (){
-      //  return Checkout null;}
-
-        public static Checkout[] removeTheElement(Checkout[] arr,
-                                             int index)
-        {
-            if (arr == null
-                    || index < 0
-                    || index >= arr.length) {
-
-                return arr;
-            }
-
-
-            Checkout[] anotherArray = new Checkout[arr.length - 1];
-
-            for (int i = 0, k = 0; i < arr.length; i++) {
-
-
-                if (i == index) {
-                    continue;
+       public Checkout getCheckoutWithSmallestQueue() {
+            int minLen = 99999;
+            Checkout ch = null  ;
+            for (var checkout : checkouts) {
+                if (checkout.queueLength() < minLen) {
+                    ch = checkout;
+                    minLen = checkout.queueLength();
                 }
-
-
-                anotherArray[k++] = arr[i];
             }
-
-            // return the resultant array
-            return anotherArray;
+            return ch; 
         }
 
-        void CloseCheckout (int index){
-            removeTheElement(checkouts, index);
+       public void closeCheckout(int index){
+            if (index > checkouts.length - 1) {
+                ExceptionUtil.illegalArgument("Checkout index is larger than the number of checkout available");
             }
 
+            if (checkouts.length == 1) {
+                ExceptionUtil.illegalArgument("Cannot close the checkout, only one available");
+            }
 
+            var targetCheckout = checkouts[index];
+            var queue = targetCheckout.getQueue();
 
-        void  serveCustomers (){
-            serveNextCustomer ();
-        }
+            var stack = new LinkedStack<PenguinCustomer>();
+            for (int x = 0; x < queue.size(); x++) {
+                stack.push(queue.dequeue());
+            }
 
-        void serveNextCustomer(){
+            // remove checkout by allocating a new array
+            Checkout[] newCheckouts = new Checkout[checkouts.length - 1];
+            var nextIndex = 0;
+            for (int x = 0; x < checkouts.length; x++) {
+                if (x != index) {
+                    newCheckouts[nextIndex++] = checkouts[x];
+                }
+            }
 
+            checkouts = newCheckouts;
+            while (!stack.isEmpty()) {
+                var customer = stack.pop();
+                customer.goToCheckout(this);
+            }
+        } 
+
+        public void  serveCustomers (){
+            for (var checkout :
+                    checkouts) {
+                while(checkout.queueLength() != 0) {
+                    checkout.serveNextCustomer();
+                }
+            }
         }
     }

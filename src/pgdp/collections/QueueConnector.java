@@ -2,17 +2,18 @@ package pgdp.collections;
 
 public class QueueConnector<T> implements DataStructureConnector<T> {
     Queue<T> inner;
-
+          
 
     public QueueConnector(Queue inQueue) {
         inner = inQueue;
     }
     public boolean hasNextElement () {
-        var nextVal = inner.dequeue();
-        boolean hasNextElem = inner.isEmpty();
-        inner.enqueue(nextVal);
-        return hasNextElem;
-    }
+    	return !inner.isEmpty();
+        //var nextVal = inner.dequeue();
+       // boolean hasNextElem = inner.isEmpty();
+        //inner.enqueue(nextVal);
+        //return hasNextElem;
+    }   
 
     public  void addElement (T value) {
         inner.enqueue(value);
@@ -30,4 +31,5 @@ public class QueueConnector<T> implements DataStructureConnector<T> {
        // push inner back
         return two;
     }
-}
+}     
+   

@@ -8,10 +8,11 @@ public class StackConnector<T> implements DataStructureConnector<T> {
     inner = inStack;
   }
   public boolean hasNextElement () {
-    var nextVal = inner.pop();
-    boolean hasNextElem = inner.isEmpty();
-    inner.push(nextVal);
-    return hasNextElem;
+      return !inner.isEmpty();
+//    var nextVal = inner.pop();
+//    boolean hasNextElem = inner.isEmpty();
+//    inner.push(nextVal);
+//    return hasNextElem;
   }
 
   public  void addElement (T value) {
@@ -23,12 +24,10 @@ public class StackConnector<T> implements DataStructureConnector<T> {
       return null;
     }
 
-    if (!hasNextElement()) {
+    if (!hasNextElement())  { 
       return null;
     }
-    var one = inner.pop(); // removed inner
-    var two = inner.pop(); // removed next
-    inner.push(one); // push inner back
-    return two;
+    var one = inner.pop(); // removed inner  
+    return one;
   }
-}
+}       

@@ -1,22 +1,19 @@
 package pgdp.collections;
 
-public class DataStructureLink {
+public class DataStructureLink<T> {
   DataStructureConnector a,b;
-
-    public  DataStructureLink(DataStructureConnector a, DataStructureConnector b){
- // public  DataStructureLink(){
-    this.a =a;  //?
-    this.b =b;
-  }
-
-
+  
+  public DataStructureLink(DataStructureConnector a,DataStructureConnector b) {
+	  this.a =a;
+	  this.b =b;
+  }  
 
   public boolean moveNextFromAToB() {
     if (!a.hasNextElement()) {
       return false;
     }
     var val = a.removeNextElement();
-
+       
     b.addElement(val);
     return true;
   }
@@ -26,3 +23,4 @@ public class DataStructureLink {
     }
   }
 }
+               

@@ -20,11 +20,11 @@ public class List<T> {
     public List(T x, List l) {
         info = x;
         next = l;
-    }
+    }  
 
     public void insert(T x) {
         next = new List(x, next);
-    }
+    }               
 
     public void delete() {
         if (next != null)
@@ -33,16 +33,17 @@ public class List<T> {
 
     public int length() {
         int result = 1;
-        for (List t = next; t != null; t = t.next)
+        for (List t = next; t != null; t = t.next)  
             result++;
         return result;
-    }
+    }    
 
     @Override
     public String toString() {
         String result = "[" + info;
         for (List t = next; t != null; t = t.next)
-            result = result + "," + t.info;
-        return result + "]";
+            result = result + ", " + t.info;
+        return result + "]";  
     }
 }
+

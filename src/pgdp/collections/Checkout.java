@@ -14,34 +14,39 @@ public class Checkout {
         return bandBeforeCashier;
     }
 
-    public Queue<FishyProduct> getGetBandAfterCashier() {
+    public Queue<FishyProduct> getBandAfterCashier() {
         return getBandAfterCashier;
     }
+ 
+  
 
-
-    public Checkout(Queue<PenguinCustomer> queue, Queue<FishyProduct> bandBeforeCashier, Queue<FishyProduct> getBandAfterCashier) {
-        this.queue = queue;
-        this.bandBeforeCashier = bandBeforeCashier;
-        this.getBandAfterCashier = getBandAfterCashier;
+    public Checkout() {
+        queue = new LinkedQueue<PenguinCustomer>();
+        bandBeforeCashier = new LinkedQueue<FishyProduct>();
+        getBandAfterCashier = new LinkedQueue<FishyProduct>();
     }
 
-    public  int queueLength(Queue<PenguinCustomer> t){
-        return t.size();
+    public  int queueLength(){
+        return queue.size();
     }
 
-    void serveNextCustomer()
-    {   int totalPay = 0;
+    public void serveNextCustomer() 
+    {
         PenguinCustomer customer = queue.dequeue();
-        var producte =customer.products;
-        while (!producte.isEmpty()) {
-            var nextel = producte.pop();
-            totalPay += nextel.getPrice();// sum price
-            bandBeforeCashier.enqueue(nextel);
+        while (!customer.products.isEmpty()) {
+            bandBeforeCashier.enqueue(customer.products.pop());
         }
 
-        customer.pay(totalPay);
-
+        int amountToPay = 0;
+        while(!bandBeforeCashier.isEmpty())  {
+            var item = bandBeforeCashier.dequeue();
+            amountToPay += item.getPrice();
+            getBandAfterCashier.enqueue(item);
+        }
+        customer.pay(amountToPay);
+        customer.takeAllProductsFromBand(getBandAfterCashier);
     }
 
 }
+
 

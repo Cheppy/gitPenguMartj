@@ -16,7 +16,7 @@ public class FishyProduct {
     public int getPrice() {
         return Price;
     }
-
+      
     final String Name;
     final int Price;
 
@@ -28,4 +28,4 @@ public class FishyProduct {
         String result = "[" + Name + "," + Price;
         return result + "]";
     }
-}
+}   

@@ -30,8 +30,18 @@ public class Checkout {
     }
 
     void serveNextCustomer()
-    {
+    {   int totalPay = 0;
+        PenguinCustomer customer = queue.dequeue();
+        var producte =customer.products;
+        while (!producte.isEmpty()) {
+            var nextel = producte.pop();
+            totalPay += nextel.getPrice();// sum price
+            bandBeforeCashier.enqueue(nextel);
+        }
+
+        customer.pay(totalPay);
 
     }
+
 }
 

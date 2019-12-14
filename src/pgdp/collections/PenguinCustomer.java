@@ -55,6 +55,8 @@ public class PenguinCustomer {
             totalPay += product.getPrice();// sum prices
             products.push(product);
         }
+
+
         return totalPay;
     }
 

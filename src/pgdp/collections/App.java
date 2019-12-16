@@ -9,7 +9,7 @@ public class App{
 
     var penguinSupermarket = new PenguinSupermarket(2);
 
-    penguinCustomer.goToCheckOut(penguinSupermarket);
+    penguinCustomer.goToCheckout(penguinSupermarket);
     penguinSupermarket.closeCheckout(1);
     penguinSupermarket.serveCustomers();
   }

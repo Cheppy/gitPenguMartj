@@ -3,21 +3,22 @@ package pgdp.collections;
 public class LinkedStack<T> implements Stack<T> {
   List<T> elem;
 
-  public  LinkedStack(){
-    this.elem = null;
-  }
+  
+ public LinkedStack() {
+	this.elem = null;  //tofixmb  
+ }
   // DataStructure implementation
   public int size() {
     if (elem != null ) {
       return elem.length();
     }
     return 0;
-  }
+  } 
 
   public boolean isEmpty() {
     return elem == null;
-  }
-
+  }   
+                 
   // Stack implementation
   public void push(T value) {
     if (elem == null) {
@@ -33,6 +34,6 @@ public class LinkedStack<T> implements Stack<T> {
     elem = elem.getNext();
     return popped.getInfo();
   }
-
+ 
 
 }

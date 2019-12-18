@@ -1,6 +1,7 @@
 package pgdp.collections;
 
-interface DataStructure {
+public interface DataStructure {
   int size();
-  boolean isEmpty();
+  public boolean isEmpty();            
 }
+             
